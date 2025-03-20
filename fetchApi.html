@@ -1,0 +1,60 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Api</title>
+</head>
+<body>
+    <div id="displayPro">
+
+    </div>
+</body>
+<script>
+    let displayPro = document.getElementById('displayPro')
+    
+    let response = fetch("https://fakestoreapi.com/products?limit=5");
+   response.then(function(data){
+    return data.json()
+   }).then(function(data){
+    let piyush=''
+    data.forEach(function(products){
+        piyush+= `<p>${products.title}</p>,$<p>{products.price}</p>`
+        
+    });
+    displayPro.HTML= piyush
+   })
+   .catch(error => console.error("Error fetching data:", error));
+   
+   
+</script>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+</head>
+<body>
+    <div id="displayPro"></div>
+
+    <script>
+        let displayPro = document.getElementById('displayPro');
+
+        fetch("https://fakestoreapi.com/products?limit=5")
+            .then(response => response.json())
+            .then(data => {
+                let piyush = ""; 
+                
+                data.forEach(product => {
+                    piyush += `<p>${product.title} - $${product.price}</p>`;
+                });
+
+                displayPro.innerHTML = piyush; 
+            })
+            .catch(error => console.error("Error fetching data:", error));
+    </script>
+</body>
+</html>  -->
